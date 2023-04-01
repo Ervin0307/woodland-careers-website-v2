@@ -25,7 +25,7 @@ JOBS= [
     'id':4,
     'title': 'Backend Engineer',
     'location': 'Raipur, India',
-    'salary': 'Rs. 18,40,000'
+    'salary': 'Rs. 75,000'
   }
 ]
 
