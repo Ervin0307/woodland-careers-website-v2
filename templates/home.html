@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Woodland Careers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <style>
+      #banner{
+        height: 360px;
+        object-fit:cover;
+        width:100%;
+      }
+    </style>
+    
+    
+    
+  </head>
+  <body>
+    <div class="container">
+      
+    <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
+    <img id="banner" class="img-fluid" src="https://woodland-2.ervin0307.repl.co/static/banner.jpg" height="320">
+    <h2 class="text-center">About Woodland</h2>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae et leo duis ut diam. Tellus pellentesque eu tincidunt tortor aliquam nulla. Cursus eget nunc scelerisque viverra. Nam at lectus urna duis convallis. Lobortis feugiat vivamus at augue eget arcu dictum varius.  </p>
+    <h2 class="text-center mt-2 mb-4"> Open Positions</h2>
+    <div>
+      {% for job in jobs %}
+        {% include 'jobitem.html' %}
+      {% endfor %}
+    </div>
+      <div class="text-center"> 
+        <button class="btn btn-primary">Contact Us</button>
+        <p class="mt-4">
+          Copyright 2023, Woodland </p>
+      </div>
+    </div>
+  </body>
+    
+</html>
