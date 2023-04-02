@@ -10,6 +10,7 @@
         height: 360px;
         object-fit:cover;
         width:100%;
+        margin-bottom: 16px;
       }
     </style>
     
@@ -17,12 +18,21 @@
     
   </head>
   <body>
-    <div class="container">
-      
-    <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
+
+    {% include 'nav.html' %}
     <img id="banner" class="img-fluid" src="https://woodland-2.ervin0307.repl.co/static/banner.jpg" height="320">
-    <h2 class="text-center">About Woodland</h2>
+    <div class="container">
+    <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
+
+
+  <div class="row" style="margin-bottom:16px">   
+    <div class="col-md-6">
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae et leo duis ut diam. Tellus pellentesque eu tincidunt tortor aliquam nulla. Cursus eget nunc scelerisque viverra. Nam at lectus urna duis convallis. Lobortis feugiat vivamus at augue eget arcu dictum varius.  </p>
+  </div>
+  <div class="d-none d-md-block col-md-6">
+    <img src="/static/peopleWorking.jpg" style="height:320px; border-radius:4px;">
+  </div>
+</div>
     <h2 class="text-center mt-2 mb-4"> Open Positions</h2>
     <div>
       {% for job in jobs %}
@@ -30,11 +40,11 @@
       {% endfor %}
     </div>
       <div class="text-center"> 
-        <button class="btn btn-primary">Contact Us</button>
-        <p class="mt-4">
-          Copyright 2023, Woodland </p>
+        <a href="mailto:ervincas13@gmail.com?subject=Queries%20about%20Job%20Openings&body=Name%3A%20%3Cyour%20name%3E%0D%0AQuery%3A%20%3Cyour%20query%20here%3E" class="btn btn-primary">Contact Us</a>
+
       </div>
     </div>
+    {% include 'footer.html' %}
   </body>
     
 </html>
