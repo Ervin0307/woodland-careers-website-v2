@@ -1,5 +1,6 @@
 { pkgs }: {
   deps = [
+    pkgs.sudo
     pkgs.python38
     pkgs.python39Full
     pkgs.python310
