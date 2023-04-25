@@ -22,3 +22,15 @@ def load_jobs_from_db():
 
   return jobs
 
+def load_job_from_db(id):
+  with engine.connect() as conn:
+    txt= text(
+        "select * from jobs where id= :val"
+      )
+    txt=txt.bindparams(val=id)
+    result= conn.execute(txt.all())
+    rows= result.all()
+    if len(rows) ==0:
+      return None
+    else: 
+      return rows[0]._mapping 
